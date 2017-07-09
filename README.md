@@ -12,7 +12,7 @@ This algorithm starts from the initial node where the path should start, the alg
 ![Dijkstra's Algorithm](https://upload.wikimedia.org/wikipedia/commons/2/23/Dijkstras_progress_animation.gif)
 
 ## A* Algorithm
-This algorithm will calculate the cost of each node around the starting node and pick the node with the lowest cost. After it calculated the node with the lowest cost, it predicts the node which appears to be closer to the goal node and calculates these first. This 
+This algorithm will calculate the cost of each node around the starting node and pick the node with the lowest cost. After it calculated the node with the lowest cost, it predicts the node which appears to be closer to the goal node and calculates these first. This results in a direct path towards the goal node without 
 
 ![A* Algorithm](https://upload.wikimedia.org/wikipedia/commons/8/85/Weighted_A_star_with_eps_5.gif)
 
