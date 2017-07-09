@@ -61,4 +61,17 @@ Now we can see that f(1) is less than f(10) so in the next step we’ll calculat
 We’ll have to keep repeating these steps until we reach the endpoint. There will be a moment where we can go 3 ways instead of 2. This works the same as 2 but now you compare 3 values with each other and take the lowest value for the next step. 
 
 ## Comparison
-All of the path planners described above are efficient in their own 
+All of the path planners described above are efficient in their own ways. This paragraph will show, with examples which one will be most efficient for a multitude of situations.
+
+
+The images below are all in the following order: BFS, Dijkstra's and A*
+### No Obstacles
+First of all, we will start with an environment without any obstacles:
+![BFS](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/BreadthFirstNoObstacles.PNG) ![Dijkstra's](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/DijkstrasNoObstacles.PNG?raw=true) ![A*](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/AStarNoObstacles.PNG?raw=true)
+You can see the characteristics of each algorithm in these images. Breadth-First Search has explored almost all of the nodes available in the grid, whilst Dijkstra has extended slightly more towards the goal node and A* has drawn a straight line towards it. All of the algorithms have found the shortest path of 10. Whilst A* has done this in the least iterations.
+### Small Obstacle
+We will add one obstacle, to see the algorithms avoid around it:
+![BFS](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/BreadthFirstSmallObstacle.PNG) ![Dijkstra's](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/DijkstrasSmallObstacle.PNG?raw=true) ![A*](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/AStarSmallObstacle.PNG?raw=true)
+All of the algorithms have found the shortest path of 23.31. In this case, the A* was, again, the most efficient algorithm with the least amount of iterations.
+### Intricate Obstacles
+The next obstacles will be arranged in such a way that the algorithm will have to calculate around intricate objects simulating a real world environment:
