@@ -24,41 +24,41 @@ All of the algorithms follow steps that I will explain using this example, where
 ![Grid one](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/Sheets.png?raw=true)
 ### Breadth-First Search
 We start with the nodes adjacent to R. Node 1 and 7 are 1 step away from the starting node. Next are nodes 2 and 10 with 2 steps away from the start. This repeats itself until the node G has been reached:
-Steps     Nodes
-1         1,7
-2         2,10
-3         3,14
-4         5,15
-5         8,16
-6         9,11
-7         G,12
+
+Steps  -  Nodes
+
+1    -    1,7
+
+2    -    2,10
+
+3    -    3,14
+
+4    -    5,15
+
+5    -    8,16
+
+6    -    9,11
+
+7    -    G,12
 
 ### Dijkstra's
 In this example, Dijkstra's algorithm will behave exactly the same as BFS. This is due to the size of the grid and due to the fact that we're using a grid instead of a graph with weights attached to the paths.
 
 ### A*
-The A* algorithm works with two parameters: f(n) = g(n)+h(n) Here, g(n) is the distance between the starting position and the node  ,   is the distance between the node   and the endpoint.   is calculated by using Pythagoras and   is the number of steps you have taken between the starting position and the node.
-For explaining the A algorithm I’ll use the example of the slides, but I’ll explain what is happening between the steps.
-Step 1:
+The A* algorithm works with two parameters: f(n) = g(n)+h(n) Here, g(n) is the distance between the starting position and the node n, h(n) is the distance between the node n and the endpoint. h(n) is calculated by using Pythagoras and g(n) is the number of steps you have taken between the starting position and the node.
+
 From R we can go to 1 and to 7. 
- 
-The steps between R and 1 is 1 so  . The distance between the node 1 and the endpoint is  .
-So  
-Same goes for  .   and   so  
-So here we see that  is a smaller value than   so in the next step   will remain and the will continue calculating the path of  and then compare the values again.
-Step 2:
- 
-For  .   because now we are two steps away from R.  . So  .
-Now we can see that   is less than   so in the next step we’ll calculate the next step for path  .
-Step 3:
-We’ll have to keep repeating the previous steps until we reach the endpoint. There will be a moment where we can go three ways instead of 2. This works the same as 2 but now you compare 3 values with each other and take the lowest value for the next step. 
+ f(1)=g(1)-h(1)
+The steps between R and 1 is 1 so g(1)=1. The distance between the node 1 and the endpoint is h(1)= sqrt{2²+4²}.
+So f(1)=1+sqrt{20} = 5.47
+Same goes for f(7) = g(7)+h(7)*g(7)=1 and h(1)=sqrt{0²+4²} so   f(7)=1+4=5
+So here we see that f(7) is a smaller value than f(1) so in the next step f(1) will remain and will continue calculating the path of f(7) and then compare the values again.
 
+f(1)=5.47
+For f(10)=g(10)+h(10)*g(10)=2 because now we are two steps away from R. h(10)=sqrt{1²+4²}. So f(10)=2+sqrt{17}=6.12.
+Now we can see that f(1) is less than f(10) so in the next step we’ll calculate the next step for path f(1).
 
-
-
-
-
-
-
+We’ll have to keep repeating these steps until we reach the endpoint. There will be a moment where we can go 3 ways instead of 2. This works the same as 2 but now you compare 3 values with each other and take the lowest value for the next step. 
 
 ## Comparison
+All of the path planners described above are efficient in their own 
