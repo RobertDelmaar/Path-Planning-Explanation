@@ -77,7 +77,7 @@ All of the algorithms have found the shortest path of 23.31. In this case, the A
 
 ### Intricate Obstacles
 The next obstacles will be arranged in such a way that the algorithm will have to calculate around intricate objects simulating a real world environment:
-![BFS](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/BreadthFirstIntricateObstacles.PNG) ![Dijkstra's](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/DijkstrasInstricateObstacles.PNG?raw=true) ![A*](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/AStarIntricateObstacles.PNG?raw=true)
+![BFS](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/BreadthFirstIntricateObstacles.PNG) ![Dijkstra's](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/DijkstrasIntricateObstacles.PNG?raw=true) ![A*](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/AStarIntricateObstacles.PNG?raw=true)
 
 Again, all of the algorithms have succesfully calculated the shortest path of 24.49. The A* Algorithm has again used the least amount of iterations.
 
