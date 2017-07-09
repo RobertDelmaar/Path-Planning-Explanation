@@ -72,6 +72,16 @@ You can see the characteristics of each algorithm in these images. Breadth-First
 ### Small Obstacle
 We will add one obstacle, to see the algorithms avoid around it:
 ![BFS](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/BreadthFirstSmallObstacle.PNG) ![Dijkstra's](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/DijkstrasSmallObstacle.PNG?raw=true) ![A*](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/AStarSmallObstacle.PNG?raw=true)
+
 All of the algorithms have found the shortest path of 23.31. In this case, the A* was, again, the most efficient algorithm with the least amount of iterations.
+
 ### Intricate Obstacles
 The next obstacles will be arranged in such a way that the algorithm will have to calculate around intricate objects simulating a real world environment:
+![BFS](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/BreadthFirstIntricateObstacles.PNG) ![Dijkstra's](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/DijkstrasInstricateObstacles.PNG?raw=true) ![A*](https://github.com/RobertDelmaar/Path-Planning-Explanation/blob/master/AStarIntricateObstacles.PNG?raw=true)
+
+Again, all of the algorithms have succesfully calculated the shortest path of 24.49. The A* Algorithm has again used the least amount of iterations.
+
+### Conclusion
+All of these Algorithms are capable of calculating the shortest path towards a node in a map. These algorithms however do have differences in iterations needed to solve it. So far, any simulation I have been able to run conclude that the A* Algorithm is the most efficient one.
+Neither BFS and Dijkstra's make use of heuristic techniques. This means A* may not take the most optimal approach but it eases the load on the device it's being ran on, as BFS and Dijkstra's use up a lot of memory making calculations and saving data. This however does require knowledge of the goal node, which is not always available in a real world application. 
+To try this theory for yourself, you can draw and simulate your own maps ![here](https://qiao.github.io/PathFinding.js/visual/)
