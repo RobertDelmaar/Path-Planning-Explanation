@@ -84,4 +84,4 @@ Again, all of the algorithms have succesfully calculated the shortest path of 24
 ### Conclusion
 All of these Algorithms are capable of calculating the shortest path towards a node in a map. These algorithms however do have differences in iterations needed to solve it. So far, any simulation I have been able to run conclude that the A* Algorithm is the most efficient one.
 Neither BFS and Dijkstra's make use of heuristic techniques. This means A* may not take the most optimal approach but it eases the load on the device it's being ran on, as BFS and Dijkstra's use up a lot of memory making calculations and saving data. This however does require knowledge of the goal node, which is not always available in a real world application. 
-To try this theory for yourself, you can draw and simulate your own maps ![here](https://qiao.github.io/PathFinding.js/visual/)
+To try this theory for yourself, you can draw and simulate your own maps [here](https://qiao.github.io/PathFinding.js/visual/)
